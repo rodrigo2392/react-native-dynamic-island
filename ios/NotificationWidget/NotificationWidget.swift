@@ -35,9 +35,9 @@ struct ContentView: View {
   let context: ActivityViewContext<NotificationAttributes>
     var body: some View {
       VStack(alignment: .center) {
-        Text(context.attributes.title)
+        Text(context.attributes.title) // Titulo pasado de react native
           .foregroundColor(.white)
-        Text(context.state.mesage)
+        Text(context.state.mesage) // Descripción pasada de react native
           .foregroundColor(.white)
       }
     }
@@ -46,7 +46,7 @@ struct ContentView: View {
 struct IconPlayView: View {
   var body: some View {
       HStack {
-          Image(systemName: "play.square")
+          Image(systemName: "play.square") // Icono de reproducir
               .foregroundColor(.white)
       }
   }
@@ -56,7 +56,7 @@ struct IconPlayView: View {
 struct IconCloseView: View {
   var body: some View {
       HStack(alignment: .center) {
-          Image(systemName: "xmark.circle")
+          Image(systemName: "xmark.circle") // Icono de cierre
               .foregroundColor(.white)
       }
   }
@@ -65,7 +65,7 @@ struct IconCloseView: View {
 struct IconNotifiyView: View {
   var body: some View {
       HStack(alignment: .center) {
-          Image(systemName: "bell.badge")
+          Image(systemName: "bell.badge") // Icono de campana
               .foregroundColor(.white)
       }
   }
@@ -74,7 +74,7 @@ struct IconNotifiyView: View {
 struct ActionButtontView: View {
   var body: some View {
     HStack{
-      Button(action: {}) {
+      Button(action: {}) { // Botton de accion del lado derecho
           HStack {
               Image(systemName: "play.square")
                   .foregroundColor(.white)
@@ -82,11 +82,11 @@ struct ActionButtontView: View {
               .bold()
           }
           .padding(EdgeInsets(top: 3, leading: 5, bottom: 3, trailing: 10))
-          .background(.green)
+          .background(.green) // Fondo Verde
           .clipShape(Capsule())
           .foregroundColor(.white)
       }
-      Button(action: {}) {
+      Button(action: {}) { // Botton de accion del lado izquierdo
           HStack {
               Image(systemName: "bell.badge")
                   .foregroundColor(.white)
@@ -94,7 +94,7 @@ struct ActionButtontView: View {
               .bold()
           }
           .padding(EdgeInsets(top: 3, leading: 5, bottom: 3, trailing: 10))
-          .background(.red)
+          .background(.red) // Fondo rojo
           .clipShape(Capsule())
           .foregroundColor(.white)
       }
@@ -112,19 +112,19 @@ struct WidgetNotification: Widget {
       } dynamicIsland: { context in
         // Se crea la vista que aparece en la isla dinámica
         DynamicIsland {
-          // Crea la vista expandida
+          // Crea la vista expandida izquierda
           DynamicIslandExpandedRegion(.leading) {
          
           }
-          
+          //Vista expandida derecha
           DynamicIslandExpandedRegion(.trailing) {
             IconCloseView()
           }
-          
+          //Vista expandida centro
           DynamicIslandExpandedRegion(.center) {
             ContentView(context: context)
           }
-          
+          //Vista expandida fondo
           DynamicIslandExpandedRegion(.bottom) {
             ActionButtontView()
           }
@@ -135,7 +135,7 @@ struct WidgetNotification: Widget {
           // Este es el icono del lado derecho
           IconNotifiyView()
         } minimal: {
-          // Crea la vista minmalista
+          // Crea la vista minimalista
           IconPlayView()
         }
         .keylineTint(.yellow)
