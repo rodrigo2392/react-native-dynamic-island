@@ -46,7 +46,7 @@
              title="Iniciar"
              onPress={() =>
                DynamicIslandModule.startNotificationActivity(
-                 'Hola',
+                 'Hola Rodrigo',
                  'Bienvenido',
                )
              }

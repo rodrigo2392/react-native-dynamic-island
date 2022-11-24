@@ -47,7 +47,7 @@ struct IconPlayView: View {
   var body: some View {
       HStack {
           Image(systemName: "play.square")
-              .foregroundColor(.green)
+              .foregroundColor(.white)
       }
   }
 }
@@ -57,7 +57,7 @@ struct IconCloseView: View {
   var body: some View {
       HStack(alignment: .center) {
           Image(systemName: "xmark.circle")
-              .foregroundColor(.red)
+              .foregroundColor(.white)
       }
   }
 }
@@ -66,7 +66,7 @@ struct IconNotifiyView: View {
   var body: some View {
       HStack(alignment: .center) {
           Image(systemName: "bell.badge")
-              .foregroundColor(.red)
+              .foregroundColor(.white)
       }
   }
 }

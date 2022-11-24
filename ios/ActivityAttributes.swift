@@ -19,14 +19,3 @@ struct NotificationAttributes: ActivityAttributes {
   var title: String
 }
 
-// FoodOrder
-struct FoodOrderAttributes: ActivityAttributes {
-  public typealias FoodOrderStatus = ContentState
-  
-  public struct ContentState: Codable, Hashable {
-    var mesage: String
-  }
-  
-  var title: String
-  var image: String
-}
