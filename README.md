@@ -10,6 +10,12 @@
   Full new dynamic island feature integration on IOS with React Native
 </p>
 
+## Watch my youtube video about how to do it
+<a href="https://www.youtube.com/watch?v=kUOyC5p5Ew4">https://www.youtube.com/watch?v=kUOyC5p5Ew4</a>
+
+
+
+
 <p align="center">
     <img src="https://img.shields.io/npm/l/@tabler/icons.svg" alt="License">
 </p>
