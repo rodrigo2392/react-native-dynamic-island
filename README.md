@@ -17,6 +17,12 @@
 
 # Getting Started
 
+- Check your XCODE version
+
+  ```
+  14.1 or above
+  ```
+
 - Clone this repo
 
   ```
